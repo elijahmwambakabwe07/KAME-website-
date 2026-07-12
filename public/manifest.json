@@ -1,0 +1,21 @@
+{
+  "name": "KAME Digital Marketing Agency",
+  "short_name": "KAME",
+  "description": "Zambia's Leading Business Visibility Agency",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1C3064",
+  "theme_color": "#1C3064",
+  "icons": [
+    {
+      "src": "/assets/brand/kame-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/kame-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

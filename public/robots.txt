@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /portal/dashboard
+Disallow: /portal/login
+
+Sitemap: https://www.kamedigital.co.zm/sitemap.xml
