@@ -9,6 +9,7 @@ const Home = lazy(() => import("./pages/Home.jsx"));
 const ServicesOverview = lazy(() => import("./pages/ServicesOverview.jsx"));
 const ServiceDetail = lazy(() => import("./pages/ServiceDetail.jsx"));
 const AuditPlatform = lazy(() => import("./pages/AuditPlatform.jsx"));
+const Pricing = lazy(() => import("./pages/Pricing.jsx"));
 const Insights = lazy(() => import("./pages/Insights.jsx"));
 const InsightDetail = lazy(() => import("./pages/InsightDetail.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/services" element={<ServicesOverview />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/business-visibility-audit" element={<AuditPlatform />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/insights/:slug" element={<InsightDetail />} />
           <Route path="/about" element={<About />} />
