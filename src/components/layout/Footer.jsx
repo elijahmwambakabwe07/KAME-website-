@@ -50,10 +50,12 @@ export default function Footer() {
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold-400">Contact</h3>
             <ul className="space-y-3 text-sm text-navy-200">
               <li className="flex items-center gap-2">
-                <Icon name="phone" className="h-4 w-4 text-gold-400" /> {siteConfig.contact.phone}
+                <Icon name="phone" className="h-4 w-4 text-gold-400" />
+                <a href={`tel:${siteConfig.contact.phoneDial}`} className="hover:text-white">{siteConfig.contact.phone}</a>
               </li>
               <li className="flex items-center gap-2">
-                <Icon name="mail" className="h-4 w-4 text-gold-400" /> {siteConfig.contact.email}
+                <Icon name="mail" className="h-4 w-4 text-gold-400" />
+                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white">{siteConfig.contact.email}</a>
               </li>
               <li className="flex items-center gap-2">
                 <Icon name="pin" className="h-4 w-4 text-gold-400" /> {siteConfig.contact.address}
@@ -65,6 +67,12 @@ export default function Footer() {
               </a>
               <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-navy-300 hover:text-white">
                 <Icon name="instagram" className="h-5 w-5" />
+              </a>
+              <a href={siteConfig.social.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-navy-300 hover:text-white">
+                <Icon name="tiktok" className="h-5 w-5" />
+              </a>
+              <a href={siteConfig.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-navy-300 hover:text-white">
+                <Icon name="youtube" className="h-5 w-5" />
               </a>
               <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-navy-300 hover:text-white">
                 <Icon name="linkedin" className="h-5 w-5" />

@@ -18,7 +18,12 @@ export default function SEO({
   noindex = false,
   children,
 }) {
-  const fullTitle = title ? `${title} | ${siteConfig.name}` : `${siteConfig.shortName} | ${siteConfig.positioning}`;
+  // Long page titles (e.g. article headlines) already use most of the
+  // ~60-character budget search engines display before truncating, so they
+  // get the short brand suffix. Short titles get the full company name,
+  // since there's room for it without truncation.
+  const suffix = title && title.length > 35 ? siteConfig.shortName : siteConfig.name;
+  const fullTitle = title ? `${title} | ${suffix}` : `${siteConfig.shortName} | ${siteConfig.positioning}`;
   const url = `${siteConfig.url}${path}`;
   const imageUrl = image.startsWith("http") ? image : `${siteConfig.url}${image}`;
 
