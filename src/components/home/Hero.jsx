@@ -23,9 +23,9 @@ export default function Hero() {
             {siteConfig.positioning}
           </span>
           <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
-            We Don&rsquo;t Just Do Marketing.
+            We Don&rsquo;t Just Market Businesses.
             <br />
-            <span className="text-gold-400">We Build Systems That Grow Business.</span>
+            <span className="text-gold-400">We Build Systems That Grow Businesses.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-navy-100 md:text-xl">
             KAME builds the visibility, trust, and relevance systems that make good Zambian
