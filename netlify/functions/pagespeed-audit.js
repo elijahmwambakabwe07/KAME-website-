@@ -43,9 +43,17 @@ export async function handler(event) {
     const json = await res.json();
 
     if (!res.ok) {
+      // Log the full third-party error server-side only (visible in Netlify's
+      // function logs), but never forward a raw external API response to the
+      // client — it's not this function's contract to guarantee what Google
+      // does or doesn't include in an error body.
+      console.error("PageSpeed API error:", JSON.stringify(json));
       return {
         statusCode: res.status,
-        body: JSON.stringify({ error: "PAGESPEED_API_ERROR", details: json }),
+        body: JSON.stringify({
+          error: "PAGESPEED_API_ERROR",
+          message: "The PageSpeed check could not complete for this URL. It may be unreachable, blocking automated requests, or the API quota may be temporarily exceeded.",
+        }),
       };
     }
 
