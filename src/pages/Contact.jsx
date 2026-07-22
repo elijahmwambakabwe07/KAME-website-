@@ -12,13 +12,19 @@ function encodeForNetlify(data) {
 }
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", business: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", business: "", message: "", "bot-field": "" });
   const [status, setStatus] = useState("idle"); // idle | submitting | success | error
 
   const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (form["bot-field"]) {
+      // Honeypot tripped — a bot filled in a field real users never see.
+      // Silently pretend success rather than tipping off the bot.
+      setStatus("success");
+      return;
+    }
     setStatus("submitting");
     try {
       await fetch("/", {
@@ -27,7 +33,7 @@ export default function Contact() {
         body: encodeForNetlify({ "form-name": "contact", ...form }),
       });
       setStatus("success");
-      setForm({ name: "", email: "", phone: "", business: "", message: "" });
+      setForm({ name: "", email: "", phone: "", business: "", message: "", "bot-field": "" });
     } catch {
       setStatus("error");
     }
@@ -54,6 +60,12 @@ export default function Contact() {
           {/* Contact form */}
           <form onSubmit={handleSubmit} name="contact" className="space-y-4">
             <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden" aria-hidden="true">
+              <label>
+                Leave this field blank
+                <input tabIndex={-1} autoComplete="off" name="bot-field" value={form["bot-field"]} onChange={handleChange} />
+              </label>
+            </p>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="contact-name" className="mb-1 block text-sm font-semibold">Name</label>
@@ -103,7 +115,9 @@ export default function Contact() {
                 <Icon name="phone" className="h-6 w-6 text-navy-700" />
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <p className="text-sm text-ink-light">{siteConfig.contact.phone} &middot; {siteConfig.contact.phoneAlt}</p>
+                  <a href={`tel:${siteConfig.contact.phoneDial}`} className="text-sm text-ink-light hover:text-navy-700">
+                    {siteConfig.contact.phone}
+                  </a>
                 </div>
               </div>
             </div>
@@ -114,6 +128,17 @@ export default function Contact() {
                   <p className="font-semibold">Email</p>
                   <a href={`mailto:${siteConfig.contact.email}`} className="text-sm text-ink-light hover:text-navy-700">
                     {siteConfig.contact.email}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="card">
+              <div className="flex items-center gap-3">
+                <Icon name="search" className="h-6 w-6 text-navy-700" />
+                <div>
+                  <p className="font-semibold">Business Visibility Audits</p>
+                  <a href={`mailto:${siteConfig.contact.auditEmail}`} className="text-sm text-ink-light hover:text-navy-700">
+                    {siteConfig.contact.auditEmail}
                   </a>
                 </div>
               </div>
