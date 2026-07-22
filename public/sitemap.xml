@@ -1,117 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kamedigital.co.zm/</loc>
+    <loc>https://kamedma.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services</loc>
+    <loc>https://kamedma.com/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/business-visibility-audit</loc>
+    <loc>https://kamedma.com/services/business-visibility-audit</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/seo</loc>
+    <loc>https://kamedma.com/services/seo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/google-business-profile</loc>
+    <loc>https://kamedma.com/services/google-business-profile</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/ai-visibility</loc>
+    <loc>https://kamedma.com/services/ai-visibility</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/website-optimisation</loc>
+    <loc>https://kamedma.com/services/website-optimisation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/local-seo</loc>
+    <loc>https://kamedma.com/services/local-seo</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/facebook-advertising</loc>
+    <loc>https://kamedma.com/services/facebook-advertising</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/google-ads</loc>
+    <loc>https://kamedma.com/services/google-ads</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/whatsapp-business</loc>
+    <loc>https://kamedma.com/services/whatsapp-business</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/business-automation</loc>
+    <loc>https://kamedma.com/services/business-automation</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/digital-strategy</loc>
+    <loc>https://kamedma.com/services/digital-strategy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/services/monthly-growth-management</loc>
+    <loc>https://kamedma.com/services/monthly-growth-management</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/business-visibility-audit</loc>
+    <loc>https://kamedma.com/business-visibility-audit</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/insights</loc>
+    <loc>https://kamedma.com/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights</loc>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/insights/why-good-businesses-stay-invisible-online</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.kamedigital.co.zm/insights/google-business-profile-checklist</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.kamedigital.co.zm/insights/ai-search-is-already-here</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.kamedigital.co.zm/insights/the-15-minute-whatsapp-rule</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.kamedigital.co.zm/insights/why-zambian-businesses-need-both-seo-and-social</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.kamedigital.co.zm/about</loc>
+    <loc>https://kamedma.com/insights/why-some-zambian-businesses-get-customers-online-and-others-dont</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.kamedigital.co.zm/contact</loc>
+    <loc>https://kamedma.com/insights/how-facebook-tiktok-google-and-ai-actually-decide-who-gets-seen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/what-is-seo-a-practical-guide-for-zambian-business-owners</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/what-is-aeo-why-googles-ai-answers-are-changing-how-customers-find-you</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/what-is-geo-getting-recommended-by-chatgpt-gemini-and-siri</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/why-followers-dont-always-mean-more-customers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/the-future-of-digital-marketing-why-zambian-businesses-must-adapt-now</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/the-google-business-profile-checklist-we-actually-use-in-audits</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/why-ai-search-is-already-here-and-what-it-means-for-your-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/the-fifteen-minute-whatsapp-rule-that-wins-sales</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/why-a-strong-facebook-page-isnt-the-same-as-being-visible-online</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/reviews-are-worth-more-than-most-business-owners-realise</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/does-your-business-actually-need-a-website</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/insights/local-seo-beyond-lusaka-kitwe-ndola-kabwe-and-livingstone</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kamedma.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

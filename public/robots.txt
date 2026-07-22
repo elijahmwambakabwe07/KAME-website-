@@ -3,4 +3,4 @@ Allow: /
 Disallow: /portal/dashboard
 Disallow: /portal/login
 
-Sitemap: https://www.kamedigital.co.zm/sitemap.xml
+Sitemap: https://kamedma.com/sitemap.xml
