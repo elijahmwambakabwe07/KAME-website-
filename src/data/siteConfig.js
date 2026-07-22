@@ -4,9 +4,9 @@
 export const siteConfig = {
   name: "KAME Digital Marketing Agency",
   shortName: "KAME",
-  tagline: "We don't just do Marketing. We Build Systems that Grow Business.",
+  tagline: "We don't just market businesses. We build systems that grow businesses.",
   positioning: "Zambia's Leading Business Visibility Agency",
-  url: "https://www.kamedigital.co.zm",
+  url: "https://kamedma.com",
   description:
     "KAME builds the visibility, trust, and relevance systems that make good Zambian businesses easy to find, easy to verify, and effortless to choose — online, in Google, and in AI search.",
   founder: "Elijah Kabwe",
@@ -16,10 +16,11 @@ export const siteConfig = {
     education: "KAME Academy",
   },
   contact: {
-    phone: "+260 770 151 514",
-    phoneAlt: "+260 976 737 755",
-    whatsapp: "260770151514",
-    email: "hello@kamedigital.co.zm",
+    phone: "+260 965 958 100",
+    phoneDial: "+260965958100",
+    whatsapp: "260965958100",
+    email: "hello@kamedma.com",
+    auditEmail: "audit@kamedma.com",
     address: "Lusaka, Zambia",
     hours: [
       { days: "Monday \u2013 Friday", time: "08:00 \u2013 17:00" },
@@ -28,10 +29,20 @@ export const siteConfig = {
     ],
   },
   social: {
-    facebook: "https://facebook.com/kamedigitalagency",
-    tiktok: "https://tiktok.com/@kame.j3",
-    instagram: "https://instagram.com/kf.digitalconsultant",
-    linkedin: "https://linkedin.com/company/kame-digital",
+    facebook: "https://facebook.com/kamedma",
+    tiktok: "https://tiktok.com/@kamedma",
+    instagram: "https://instagram.com/kamedma",
+    linkedin: "https://linkedin.com/company/kamedma",
+    youtube: "https://youtube.com/@kamedma",
+  },
+  // KAME Visibility Pro — premium tier, architecture-only per V1.0 scope.
+  // No payment processing, no billing, no subscriptions are implemented.
+  // This config exists purely to drive the "coming soon" waiting-list UI.
+  premium: {
+    productName: "KAME Visibility Pro",
+    status: "launching_soon",
+    waitingListEnabled: true,
+    futurePaymentMethods: ["MTN MoMo", "Airtel Money", "Zamtel Kwacha", "Visa", "Mastercard"],
   },
   pillars: [
     {
@@ -52,6 +63,7 @@ export const siteConfig = {
     { label: "Services", path: "/services" },
     { label: "Business Visibility Audit", path: "/business-visibility-audit" },
     { label: "Business Insights", path: "/insights" },
+    { label: "Pricing", path: "/pricing" },
     { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
   ],
@@ -59,6 +71,7 @@ export const siteConfig = {
     company: [
       { label: "About KAME", path: "/about" },
       { label: "Business Insights", path: "/insights" },
+      { label: "Pricing", path: "/pricing" },
       { label: "Contact", path: "/contact" },
       { label: "Client Portal", path: "/portal/login" },
     ],
