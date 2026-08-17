@@ -13,10 +13,13 @@ function encodeForNetlify(data) {
 }
 
 function WaitingListForm() {
-  const [form, setForm] = useState({ name: "", email: "", business: "", plan: "", "bot-field": "" });
+  const [form, setForm] = useState({ name: "", email: "", business: "", plan: "", consent: false, "bot-field": "" });
   const [status, setStatus] = useState("idle");
 
-  const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    const { name, type, value, checked } = e.target;
+    setForm((f) => ({ ...f, [name]: type === "checkbox" ? checked : value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,7 +35,7 @@ function WaitingListForm() {
         body: encodeForNetlify({ "form-name": "waiting-list", ...form }),
       });
       setStatus("success");
-      setForm({ name: "", email: "", business: "", plan: "", "bot-field": "" });
+      setForm({ name: "", email: "", business: "", plan: "", consent: false, "bot-field": "" });
     } catch {
       setStatus("error");
     }
@@ -71,7 +74,27 @@ function WaitingListForm() {
         <input id="wl-business" name="business" value={form.business} onChange={handleChange} className="w-full rounded-lg border border-navy-100 px-4 py-2.5 focus:border-navy-700 focus:outline-none" />
       </div>
       <input type="hidden" name="plan" value={form.plan} />
-      <button type="submit" disabled={status === "submitting"} className="btn-primary w-full disabled:opacity-60">
+      <div className="flex items-start gap-2">
+        <input
+          id="wl-consent"
+          type="checkbox"
+          required
+          name="consent"
+          checked={form.consent}
+          onChange={handleChange}
+          className="mt-1 h-4 w-4 flex-shrink-0 rounded border-navy-300 text-navy-700 focus:ring-navy-700"
+        />
+        <label htmlFor="wl-consent" className="text-sm text-ink-light">
+          I agree to KAME's{" "}
+          <Link to="/privacy-policy" className="font-semibold text-navy-700 hover:underline">
+            Privacy Policy
+          </Link>
+          , consent to my information being processed (including by our hosting provider outside
+          Zambia) so I can be contacted when {siteConfig.premium.productName} launches, and
+          understand I can withdraw this consent at any time.
+        </label>
+      </div>
+      <button type="submit" disabled={status === "submitting" || !form.consent} className="btn-primary w-full disabled:opacity-60">
         {status === "submitting" ? "Joining..." : "Join the Waiting List"}
       </button>
       {status === "error" && <p className="text-sm font-semibold text-red-700">Something went wrong — please try again or WhatsApp us directly.</p>}

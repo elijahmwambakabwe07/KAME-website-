@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SEO from "../components/layout/SEO.jsx";
 import { BreadcrumbSchema, LocalBusinessSchema } from "../components/schema/SchemaComponents.jsx";
 import { siteConfig } from "../data/siteConfig.js";
@@ -12,10 +13,13 @@ function encodeForNetlify(data) {
 }
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", business: "", message: "", "bot-field": "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", business: "", message: "", consent: false, "bot-field": "" });
   const [status, setStatus] = useState("idle"); // idle | submitting | success | error
 
-  const handleChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    const { name, type, value, checked } = e.target;
+    setForm((f) => ({ ...f, [name]: type === "checkbox" ? checked : value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +37,7 @@ export default function Contact() {
         body: encodeForNetlify({ "form-name": "contact", ...form }),
       });
       setStatus("success");
-      setForm({ name: "", email: "", phone: "", business: "", message: "", "bot-field": "" });
+      setForm({ name: "", email: "", phone: "", business: "", message: "", consent: false, "bot-field": "" });
     } catch {
       setStatus("error");
     }
@@ -90,7 +94,27 @@ export default function Contact() {
               <label htmlFor="contact-message" className="mb-1 block text-sm font-semibold">Message</label>
               <textarea id="contact-message" required name="message" rows="5" value={form.message} onChange={handleChange} className="w-full rounded-lg border border-navy-100 px-4 py-2.5 focus:border-navy-700 focus:outline-none" />
             </div>
-            <button type="submit" disabled={status === "submitting"} className="btn-primary w-full sm:w-auto disabled:opacity-60">
+            <div className="flex items-start gap-2">
+              <input
+                id="contact-consent"
+                type="checkbox"
+                required
+                name="consent"
+                checked={form.consent}
+                onChange={handleChange}
+                className="mt-1 h-4 w-4 flex-shrink-0 rounded border-navy-300 text-navy-700 focus:ring-navy-700"
+              />
+              <label htmlFor="contact-consent" className="text-sm text-ink-light">
+                I agree to KAME's{" "}
+                <Link to="/privacy-policy" className="font-semibold text-navy-700 hover:underline">
+                  Privacy Policy
+                </Link>
+                , consent to my information being processed (including by our hosting provider
+                outside Zambia) to respond to this enquiry, and understand I can withdraw this
+                consent at any time.
+              </label>
+            </div>
+            <button type="submit" disabled={status === "submitting" || !form.consent} className="btn-primary w-full sm:w-auto disabled:opacity-60">
               {status === "submitting" ? "Sending..." : "Send Message"}
             </button>
             {status === "success" && <p className="text-sm font-semibold text-green-700">Thank you — we'll be in touch shortly.</p>}
